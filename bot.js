@@ -32,6 +32,10 @@ for (const folder of commandFolders) {
   }
 }
 
+client.once(Events.ClientReady, (readyClient) => {
+  console.log(`Ready! Logged in as ${readyClient.user.tag}`)
+})
+
 client.on(Events.InteractionCreate, async (interaction) => {
   if (!interaction.isChatInputCommand()) return
   const command = interaction.client.commands.get(interaction.commandName)
@@ -57,10 +61,6 @@ client.on(Events.InteractionCreate, async (interaction) => {
       })
     }
   }
-})
-
-client.once(Events.ClientReady, (readyClient) => {
-  console.log(`Ready! Logged in as ${readyClient.user.tag}`)
 })
 
 client.login(token)
