@@ -1,4 +1,5 @@
 console.log("I am alive!")
+const keepAlive = require("./server")
 const fs = require("node:fs")
 const path = require("node:path")
 const { Client, Collection, Events, GatewayIntentBits } = require("discord.js") //importing Discord.js
@@ -62,5 +63,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
     }
   }
 })
+
+keepAlive()
 
 client.login(token)
