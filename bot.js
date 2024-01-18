@@ -3,7 +3,9 @@ const keepAlive = require("./server")
 const fs = require("node:fs")
 const path = require("node:path")
 const { Client, Collection, Events, GatewayIntentBits } = require("discord.js") //importing Discord.js
-const { token } = require("./config.json")
+// const { token } = require("./config.json")
+
+require("dotenv").config({ path: `${__dirname}/.env` })
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
@@ -66,4 +68,4 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
 keepAlive()
 
-client.login(token)
+client.login(process.env.CLIENT_TOKEN)
