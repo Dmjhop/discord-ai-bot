@@ -4,9 +4,8 @@ const fs = require("node:fs")
 const path = require("node:path")
 const { Client, Collection, Events, GatewayIntentBits } = require("discord.js") //importing Discord.js
 // const { token } = require("./config.json")
-const dotenv = require("dotenv")
 
-dotenv.config()
+require("dotenv").config({ path: `${__dirname}/.env` })
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
