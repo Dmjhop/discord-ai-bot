@@ -9,3 +9,5 @@ config.json
 .env
 
 test.js
+
+commands\utility\ai.js
