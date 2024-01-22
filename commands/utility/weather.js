@@ -21,7 +21,7 @@ module.exports = {
     console.log(weatherData)
 
     await interaction.reply(
-      `#Weather in \n ## ${weatherData.name} \n ###Temp: \n Currently it is **${weatherData.main.temp}°F** \n High: **${weatherData.main.temp_max}°F** \n Low: **${weatherData.main.temp_min}°F** \n
+      `# Weather Report \n ## For ${weatherData.name} \n ### Temp: \n Currently it is **${weatherData.main.temp}°F** \n High: **${weatherData.main.temp_max}°F** \n Low: **${weatherData.main.temp_min}°F** \n
       `
     )
   },
