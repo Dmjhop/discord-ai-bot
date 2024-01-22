@@ -22,7 +22,7 @@ module.exports = {
 
     await interaction.reply(
       `# Weather Report \n## For ${weatherData.name} \n### Temperature: \nCurrently it is **${weatherData.main.temp} °F** \nHigh: **${weatherData.main.temp_max} °F** \nLow: **${weatherData.main.temp_min} °F** \n
-\n ### Wind:\nSpeed: ${weatherData.wind.speed} mph
+### Wind:\nSpeed: **${weatherData.wind.speed} mph**
       `
     )
   },
