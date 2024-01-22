@@ -7,12 +7,12 @@ module.exports = {
     .setDescription("Gives current weather according to a zip code!")
     .addStringOption((option) =>
       option
-        .setName("input")
-        .setDescription("input to echo back")
+        .setName("zipcode")
+        .setDescription("Where would you like weather info?")
         .setRequired(true)
     ),
   async execute(interaction) {
-    const input = await interaction.options.get("input")
+    const input = await interaction.options.get("zipcode")
 
     console.log(`\n \n This was the input ${input.value} \n \n`)
 
